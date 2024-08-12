@@ -21,19 +21,8 @@ void gotocr(int col, int row)
     }
 }
 
-int main()
+void calculation()
 {
-    system("title GPA Calculator(By M A K)");
-    system("color 07");
-
-    gotocr(50, 10);
-    cout << "Welcome To the GPA Calculator\n \t\t\t\t\t\t\t  BY M.A Kabir" << endl;
-
-    Sleep(3000);
-    system("cls");
-
-     system("color 75");
-
     cout << "Enter How Many Subjects You Have in This Semester (Including Lab)" << endl;
     int n;
     cin >> n;
@@ -66,6 +55,23 @@ int main()
     exitProgram();
 
 
+}
+
+int main()
+{
+    system("title GPA Calculator(By M A K)");
+    system("color 07");
+
+    gotocr(50, 10);
+    cout << "Welcome To the GPA Calculator\n \t\t\t\t\t\t\t  BY M.A Kabir" << endl;
+
+    Sleep(3000);
+    system("cls");
+
+     system("color 75");
+     calculation();
+
+
     return 0;
 }
 
@@ -90,13 +96,14 @@ void exitProgram()
         else if (permission == 'n' || permission == 'N')
         {
             system("cls");
-            main();
+            calculation();
         }
         else
         {
-            cout << "\nNext time to choose after clearly read the corresponding line.\n" << endl;
+            cout << "\n!!OOPS!!\nInvalid Keyword.\nPlease Read the Corresponding line Carefully Before Press an Keyword.\n" << endl;
             goto ExitProgram;
         }
 
     }
+
 
